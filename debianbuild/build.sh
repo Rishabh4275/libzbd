@@ -36,9 +36,11 @@ mv $MAINFOLDER $MAINFOLDER-$1
 cd $MAINFOLDER-$1
 
 debmake
+cd debian
+sed -i 's/Section: unknown/Section: embedded/' control
 
 
-
+cd $MAINFOLDER-$1
 debuild
 #The deb package is present in DebianBuild Directory which is at the level of the repository 
 
