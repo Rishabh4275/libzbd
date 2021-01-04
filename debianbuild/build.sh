@@ -5,6 +5,8 @@ usage(){
 
 #Add install files
 
+sudo apt update
+sudo apt install debmake devscripts debhelper dh-autoreconf automake libtool autoconf autoconf-archive -y
 
 
 if [ "$#" -ne 1 ]
